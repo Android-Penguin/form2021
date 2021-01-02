@@ -1,0 +1,85 @@
+/* Full document styles ///////////////////////////////////////////////////////*/
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica", "sans-serif";
+}
+body {
+  overflow-y: scroll;
+}
+
+/*Flexbox styling//////////////////////////////////////////////////////////////*/
+.flex-container {
+  display: flex;
+  height: auto;
+  width: 98%;
+}
+.flex-child {
+  margin-bottom: 10px;
+  height: auto;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1.5px;
+  border-radius: 15px;
+}
+
+/*Dropdown box Styling/////////////////////////////////////////////////////////*/
+/* Title */
+.form-class-title {
+  padding: 14px 10px 10px 10px;
+  height: 60px;
+}
+.form-class-title h2 {
+  margin: 0;
+}
+.form-class-title img {
+  float:left;
+  margin-right: 8px;
+  width: 34.4px;
+}
+/* List Content */
+.form-class-content {
+  padding: 5px;
+}
+.form-class-content li {
+    display: block;
+    float: left;
+    margin: 5px 0 5px 0;
+    width: 25%;
+}
+@media (max-width: 1007px) {
+  .form-class-content li {
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  .form-class-content li {
+    width: 100%;
+  }
+}
+
+/*Animation stuff//////////////////////////////////////////////////////////////*/
+.hidden {
+  display: none;
+}
+.rotate-animation {
+  animation-name: rotate90;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+@keyframes rotate90 {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(90deg);}
+}
+
+.expand-animation {
+  overflow: hidden;
+  animation-name: expand;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+@keyframes expand {
+  from {max-height:1px; visibility: none;}
+  to {max-height:150vh; visibility: visible;}
+}

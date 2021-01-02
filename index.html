@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>KWS Yr13 Form 2021</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shaun C-B">
+  <meta name="keywords" content="Form Class, Kingsway">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="ui_images/page_iconICO.ico">
+</head>
+
+<body>
+  <h1>KWS 2021 Form Classes Year 13</h1>
+  <div id="classes-container" class="flex-container">
+
+    <div class="flex-child">
+      <div class="form-class-title">
+        <img id="_13BCObutton" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13BCO, _13BCObutton)">
+        <h2>Test | S101</h2>
+      </div>
+      <div id="_13BCO" class="form-class-content hidden">
+        <ul id="13BCO-list" class="student-list">
+          <!-- List inserted here -->
+          <li>student1</li>
+          <li>student2</li>
+          <li>student3</li>
+          <li>student4</li>
+          <li>student5</li>
+          <li>student6</li>
+          <li>student7</li>
+          <li>student8</li>
+          <li>student9</li>
+          <li>student10</li>
+          <li>student11</li>
+          <li>student12</li>
+          <li>student13</li>
+          <li>student14</li>
+          <li>student15</li>
+          <li>student16</li>
+          <li>student17</li>
+          <li>student18</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Expand divs -->
+    <script>
+    // Toggles animation class on collapsing divs which expands/closes them
+      function expandDiv(selectedDiv, selectedButton) {
+        selectedDiv.classList.toggle("hidden");
+        selectedDiv.classList.toggle("expand-animation");
+        selectedButton.classList.toggle("rotate-animation");
+      }
+    </script>
+</body>
