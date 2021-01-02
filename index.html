@@ -14,38 +14,139 @@
   <h1>KWS 2021 Form Classes Year 13</h1>
   <div id="classes-container" class="flex-container">
 
+    <!-- Test Dropdown -->
+    <!-- <div class="flex-child">
+      <div class="form-class-title">
+        <img id="test_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(test_div, test_button)">
+        <h2>Test | 13TES | T101</h2>
+      </div>
+      <div id="test_div" class="form-class-content hidden">
+        <ul id="test-list" class="student-list">
+          <li>- student1</li>
+          <li>- student2</li>
+          <li>- student3</li>
+          <li>- student4</li>
+          <li>- student5</li>
+          <li>- student6</li>
+          <li>- student7</li>
+          <li>- student8</li>
+          <li>- student9</li>
+          <li>- student10</li>
+          <li>- student11</li>
+          <li>- student12</li>
+          <li>- student13</li>
+          <li>- student14</li>
+          <li>- student15</li>
+          <li>- student16</li>
+          <li>- student17</li>
+          <li>- student18</li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- 13BCO -->
     <div class="flex-child">
       <div class="form-class-title">
-        <img id="_13BCObutton" src="ui_images/button_index.png" alt="Dropdown"
-            onclick="expandDiv(_13BCO, _13BCObutton)">
-        <h2>Test | S101</h2>
+        <img id="_13BCO_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13BCO_div, _13BCO_button)">
+        <h2>Miss Coombridge | 13BCO | ????</h2>
       </div>
-      <div id="_13BCO" class="form-class-content hidden">
-        <ul id="13BCO-list" class="student-list">
+      <div id="_13BCO_div" class="form-class-content hidden">
+        <ul id="_13BCO-list" class="student-list">
           <!-- List inserted here -->
-          <li>student1</li>
-          <li>student2</li>
-          <li>student3</li>
-          <li>student4</li>
-          <li>student5</li>
-          <li>student6</li>
-          <li>student7</li>
-          <li>student8</li>
-          <li>student9</li>
-          <li>student10</li>
-          <li>student11</li>
-          <li>student12</li>
-          <li>student13</li>
-          <li>student14</li>
-          <li>student15</li>
-          <li>student16</li>
-          <li>student17</li>
-          <li>student18</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13CTH -->
+    <div class="flex-child">
+      <div class="form-class-title">
+        <img id="_13CTH_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13CTH_div, _13CTH_button)">
+        <h2>Mr Thomson | 13CTH | K101</h2>
+      </div>
+      <div id="_13CTH_div" class="form-class-content hidden">
+        <ul id="_13CTH-list" class="student-list">
+          <!-- List inserted here -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13DWD -->
+    <div class="flex-child">
+      <div class="form-class-title">
+        <img id="_13DWD_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13DWD_div, _13DWD_button)">
+        <h2>Mr Ward | 13DWD | A205</h2>
+      </div>
+      <div id="_13DWD_div" class="form-class-content hidden">
+        <ul id="_13DWD-list" class="student-list">
+          <!-- List inserted here -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13LPR -->
+    <div class="flex-child">
+      <div class="form-class-title">
+        <img id="_13LPR_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13LPR_div, _13LPR_button)">
+        <h2>Mrs Price | 13LPR | S207</h2>
+      </div>
+      <div id="_13LPR_div" class="form-class-content hidden">
+        <ul id="_13LPR-list" class="student-list">
+          <!-- List inserted here -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13MHA -->
+    <div class="flex-child">
+      <div class="form-class-title">
+        <img id="_13MHA_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13MHA_div, _13MHA_button)">
+        <h2>Mr Harris | 13MHA | K102</h2>
+      </div>
+      <div id="_13MHA_div" class="form-class-content hidden">
+        <ul id="_13MHA-list" class="student-list">
+          <!-- List inserted here -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13SCL -->
+    <div class="flex-child">
+      <div class="form-class-title">
+        <img id="_13SCL_button" src="ui_images/button_index.png" alt="Dropdown"
+            onclick="expandDiv(_13SCL_div, _13SCL_button)">
+        <h2>Mr Cleary | 13SCL | A201</h2>
+      </div>
+      <div id="_13SCL_div" class="form-class-content hidden">
+        <ul id="_13SCL-list" class="student-list">
+          <!-- List inserted here -->
         </ul>
       </div>
     </div>
 
   </div>
+
+  <!-- Scripts -->
+
+  <!-- Generate student lists in each dropdown -->
+  <script src=https://dl.dropboxusercontent.com/s/3tfgnzzlin4d637/form_classes.js></script>
+  <script>
+    for(form_class of form_classes) {
+      var listID = "_" + form_class.code + "-list";
+      var list = document.getElementById(listID);
+      console.log(list);
+      for(student of form_class.students) {
+        li = document.createElement("li");
+        li.innerHTML = "- " + student;
+        list.appendChild(li);
+      }
+    }
+  </script>
 
   <!-- Expand divs -->
     <script>
@@ -57,3 +158,4 @@
       }
     </script>
 </body>
+</html>

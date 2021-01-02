@@ -10,6 +10,7 @@ body {
 /*Flexbox styling//////////////////////////////////////////////////////////////*/
 .flex-container {
   display: flex;
+  flex-direction: column;
   height: auto;
   width: 98%;
 }
@@ -18,7 +19,7 @@ body {
   height: auto;
   width: 100%;
   border-style: solid;
-  border-color: black;
+  border-color: rgba(0, 0, 0, 0.603);
   border-width: 1.5px;
   border-radius: 15px;
 }
@@ -42,10 +43,10 @@ body {
   padding: 5px;
 }
 .form-class-content li {
-    display: block;
-    float: left;
-    margin: 5px 0 5px 0;
-    width: 25%;
+  display: block;
+  float: left;
+  margin: 5px 0 5px 0;
+  width: 25%;
 }
 @media (max-width: 1007px) {
   .form-class-content li {
@@ -76,10 +77,10 @@ body {
   overflow: hidden;
   animation-name: expand;
   animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  animation-duration: 0.6s;
   animation-fill-mode: both;
 }
 @keyframes expand {
   from {max-height:1px; visibility: none;}
-  to {max-height:150vh; visibility: visible;}
+  to {max-height:200vh; visibility: visible;}
 }
