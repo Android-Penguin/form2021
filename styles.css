@@ -4,9 +4,12 @@
   color: white;
   font-family: 'Noto Sans HK', sans-serif;
 }
+:root {
+  --divHeight: 100px;
+}
 body {
   overflow-y: scroll;
-  background-image: url(https://media.discordapp.net/attachments/663309884934062110/794887438560526346/unknown.png);
+  background-image: url(ui_images/background1_optimized.png);
   background-position: center;
   /* background-attachment: fixed; */
   background-size: 100%;
@@ -96,9 +99,18 @@ h1 {
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
+.rotate-animation-reverse {
+  animation-name: rotate90-reverse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
 @keyframes rotate90 {
   from{transform: rotate(0deg);}
   to{transform: rotate(90deg);}
+}
+@keyframes rotate90-reverse {
+  from{transform: rotate(90deg);}
+  to{transform: rotate(0deg);}
 }
 
 .expand-animation {
@@ -108,7 +120,17 @@ h1 {
   animation-duration: 0.6s;
   animation-fill-mode: both;
 }
+.expand-animation-reverse {
+  overflow: hidden;
+  animation-name: expand-reverse;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
 @keyframes expand {
   from {max-height:1px; visibility: none;}
   to {max-height:200vh; visibility: visible;}
+}
+@keyframes expand-reverse {
+  from {height: var(--divHeight); visibility: visible;}
+  to {height:1px; visibility: none;}
 }
