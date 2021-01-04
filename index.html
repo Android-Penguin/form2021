@@ -133,7 +133,9 @@
 
   </div>
 
-  <!-- Scripts -->
+  <p>Missing a name? Send a message to mail@shauncb.xyz</p>
+
+  <!---------------------- Scripts ---------------------->
 
   <!-- Generate student lists in each dropdown -->
   <script src=https://dl.dropboxusercontent.com/s/3tfgnzzlin4d637/form_classes.js></script>
@@ -141,38 +143,52 @@
     for(form_class of form_classes) {
       var listID = "_" + form_class.code + "-list";
       var list = document.getElementById(listID);
-      console.log(list);
+      // console.log(list);
+      form_class.students.sort();
       for(student of form_class.students) {
         li = document.createElement("li");
-        li.innerHTML = "- " + student;
+        li.innerHTML = "&#9734 " + student;
         list.appendChild(li);
       }
     }
   </script>
 
   <!-- Expand divs -->
-    <script>
+  <script>
     // Toggles animation class on collapsing divs which expands/closes them
-      function expandDiv(selectedDiv, selectedButton) {
-        // Oneshot if-statement to remove the hidden property on first expansion
-        if(selectedDiv.classList.contains("hidden")) {
-          selectedDiv.classList.toggle("hidden");
-        }
-
-        // Calculates height of selectedDiv
-        var positionInfo = selectedDiv.getBoundingClientRect();
-        var divHeight = positionInfo.height + "px";
-        console.log(divHeight);
-        //Sets CSS variable to the div height
-        var root = document.querySelector(":root");
-        root.style.setProperty("--divHeight", divHeight);
-
-        // Toggles expanding and retracting animation funcitons
-        selectedDiv.classList.toggle("expand-animation");
-        selectedDiv.classList.toggle("expand-animation-reverse");
-        selectedButton.classList.toggle("rotate-animation");
-        selectedButton.classList.toggle("rotate-animation-reverse");
+    function expandDiv(selectedDiv, selectedButton) {
+      // Oneshot if-statement to remove the hidden property on first expansion
+      if(selectedDiv.classList.contains("hidden")) {
+        selectedDiv.classList.toggle("hidden");
       }
-    </script>
+      // Calculates height of selectedDiv
+      var positionInfo = selectedDiv.getBoundingClientRect();
+      var divHeight = positionInfo.height + "px";
+      // console.log(divHeight);
+
+      //Sets CSS variable to the div height
+      var root = document.querySelector(":root");
+      root.style.setProperty("--divHeight", divHeight);
+
+      // Toggles expanding and retracting animation funcitons
+      selectedDiv.classList.toggle("expand-animation");
+      selectedDiv.classList.toggle("expand-animation-reverse");
+      selectedButton.classList.toggle("rotate-animation");
+      selectedButton.classList.toggle("rotate-animation-reverse");
+    }
+  </script>
+
+  <!-- <script>
+    var divs = document.getElementsByClassName("form-class-content");
+    for(item of divs) {
+      setTimeout(() => {
+        if(item.classList.contains("hidden")) {
+        item.classList.toggle("hidden");
+        console.log(item + " is done");
+        }
+      }, 600);
+    }
+     
+  </script> -->
 </body>
 </html>

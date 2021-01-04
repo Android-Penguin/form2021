@@ -30,7 +30,7 @@ h1 {
 }
 .flex-child {
   margin-bottom: 10px;
-  height: auto;
+  min-height: 75px;
   width: 60%;
   border-style: solid;
   border-color: rgba(8, 89, 143, 0.664);
@@ -77,7 +77,9 @@ h1 {
   display: block;
   float: left;
   margin: 5px 0 5px 0;
+  padding-left: 30px;
   width: 25%;
+  text-align: left;
 }
 @media (max-width: 1007px) {
   .form-class-content li {
@@ -87,6 +89,9 @@ h1 {
 @media (max-width: 640px) {
   .form-class-content li {
     width: 100%;
+    padding-left: 0;
+    text-align: center;
+    text-alig
   }
 }
 
@@ -128,7 +133,7 @@ h1 {
 }
 @keyframes expand {
   from {max-height:1px; visibility: none;}
-  to {max-height:200vh; visibility: visible;}
+  to {max-height:160vh; visibility: visible;}
 }
 @keyframes expand-reverse {
   from {height: var(--divHeight); visibility: visible;}
